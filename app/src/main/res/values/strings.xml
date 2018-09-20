@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">FYP</string>
-    <string name="Start">Start</string>
+    <!--variable-->
+    <string name="firstVariable">X</string>
+    <string name="secondVariable">Y</string>
+    <!--symbol-->
+    <string name="summationSymbol">+</string>
+    <string name="subtractionSymbol">-</string>
+    <!--text-->
+    <string name="correctAnswer">Correct</string>
+    <string name="wrongAnswer">Incorrect</string>
+    <string name="timeLeft">Time Left</string>
+    <string name="score">Score</string>
+    <string name="testFinished">Test Finished, you Scored</string>
+    <!--button-->
+    <string name="startButton">Start</string>
+    <string name="confirmButton">Confirm</string>
+    <string name="nextButton">Next</string>
 </resources>

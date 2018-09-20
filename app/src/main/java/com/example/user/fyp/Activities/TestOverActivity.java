@@ -1,13 +1,15 @@
-package com.example.user.fyp;
+package com.example.user.fyp.Activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Summation1 extends AppCompatActivity {
+import com.example.user.fyp.R;
+
+public class TestOverActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_summation1);
+        setContentView(R.layout.activity_test_over);
     }
 }
