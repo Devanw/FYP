@@ -47,11 +47,11 @@ public class SchedulerActivity extends AppCompatActivity {
 
         myClipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
 
-        ll_set_time = (LinearLayout) findViewById(R.id.ll_set_time);
+        ll_set_time = (LinearLayout) findViewById(R.id.schedulerActivity_llSetStime);
 
-        tvTime = (TextView) findViewById(R.id.tv_reminder_time_desc);
+        tvTime = (TextView) findViewById(R.id.schedulerActivity_tvReminderTimeDesc);
 
-        reminderSwitch = (SwitchCompat) findViewById(R.id.timerSwitch);
+        reminderSwitch = (SwitchCompat) findViewById(R.id.schedulerActivity_timerSwitch);
 
         hour = localData.get_hour();
         min = localData.get_min();

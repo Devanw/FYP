@@ -17,7 +17,7 @@ public class MathTopicActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_topic);
-        Button buttonSummation = findViewById(R.id.button10);
+        Button buttonSummation = findViewById(R.id.mathTopicActivity_summationTopic1);
         buttonSummation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

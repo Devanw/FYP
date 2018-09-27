@@ -9,49 +9,49 @@
 
 
     <TextView
-        android:id="@+id/tv_reminder_header"
+        android:id="@+id/schedulerActivity_tvReminderHeader"
         style="@style/settings_header"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/sett_reminder_header"
-        app:layout_constraintStart_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/schedulerActivity_glLeft"
         app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline16"
+        android:id="@+id/schedulerActivity_glLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline18"
+        android:id="@+id/schedulerActivity_glRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
 
     <LinearLayout
-        android:id="@+id/linearLayout_toggleAlarm"
+        android:id="@+id/schedulerActivity_llToggleAlarm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
-        app:layout_constraintStart_toStartOf="@+id/guideline16"
-        app:layout_constraintTop_toBottomOf="@+id/tv_reminder_header">
+        app:layout_constraintEnd_toStartOf="@+id/schedulerActivity_glRight"
+        app:layout_constraintStart_toStartOf="@+id/schedulerActivity_glLeft"
+        app:layout_constraintTop_toBottomOf="@+id/schedulerActivity_tvReminderHeader">
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/schedulerActivity_llReminder"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/llReminder2">
+            android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tv_reminder_label"
+                android:id="@+id/schedulerActivity_tvReminderLabel"
                 style="@style/settings_sub_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 app:layout_constraintVertical_bias="0.476" />
 
             <android.support.v7.widget.SwitchCompat
-                android:id="@+id/timerSwitch"
+                android:id="@+id/schedulerActivity_timerSwitch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -82,21 +82,21 @@
         </android.support.constraint.ConstraintLayout>
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/schedulerActivity_tvLabelText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="We will remind you of your studies"
-            app:layout_constraintEnd_toStartOf="@+id/guideline18"
+            android:text="@string/sett_reminder_desc"
+            app:layout_constraintEnd_toStartOf="@+id/schedulerActivity_glRight"
             app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="@+id/guideline16"
+            app:layout_constraintStart_toStartOf="@+id/schedulerActivity_glLeft"
             tools:layout_editor_absoluteY="124dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/ll_set_time"
+        android:id="@+id/schedulerActivity_llSetStime"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -104,18 +104,18 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/guideline19"
-        app:layout_constraintEnd_toStartOf="@+id/guideline18"
+        app:layout_constraintBottom_toTopOf="@+id/schedulerActivity_glHorisontal"
+        app:layout_constraintEnd_toStartOf="@+id/schedulerActivity_glRight"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline16"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout_toggleAlarm">
+        app:layout_constraintStart_toStartOf="@+id/schedulerActivity_glLeft"
+        app:layout_constraintTop_toBottomOf="@+id/schedulerActivity_llToggleAlarm">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/tv_reminder_time_label"
+                android:id="@+id/schedulerActivity_tvReminderTimeLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -126,7 +126,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/iv_timer"
+                android:id="@+id/schedulerActivity_ivTimer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
@@ -139,14 +139,14 @@
         </android.support.constraint.ConstraintLayout>
 
         <TextView
-            android:id="@+id/tv_reminder_time_desc"
+            android:id="@+id/schedulerActivity_tvReminderTimeDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/sett_reminder_time_content" />
     </LinearLayout>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline19"
+        android:id="@+id/schedulerActivity_glHorisontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

@@ -18,7 +18,7 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Button button1 = findViewById(R.id.button2);
+        Button button1 = findViewById(R.id.homeActivity_mathButton);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonSchedule = findViewById(R.id.schedulebutton);
+        Button buttonSchedule = findViewById(R.id.homeActivity_schedulebutton);
         buttonSchedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -39,7 +39,7 @@ public class Summation1 extends AppCompatActivity {
         x = findViewById(R.id.summation1_firstNumber);
         y = findViewById(R.id.summation1_secondNumber);
         c = findViewById(R.id.summation1_answer);
-        answer_textView = findViewById(R.id.hiddenAnswer);
+        answer_textView = findViewById(R.id.summation1_hiddenAnswer);
         confirm = findViewById(R.id.summation1_buttonConfirm);
         timeLeft_textView = findViewById(R.id.summation1_timeLeft);
         score_textView = findViewById(R.id.summation1_score);
