@@ -11,7 +11,7 @@
     <string name="wrongAnswer">Incorrect</string>
     <string name="timeLeft">Time Left</string>
     <string name="score">Score</string>
-    <string name="testFinished">Test Finished, you Scored</string>
+    <string name="testFinished">Test Finished,\n You Scored</string>
     <!--button-->
     <string name="startButton">Start</string>
     <string name="confirmButton">Confirm</string>
