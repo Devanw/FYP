@@ -28,5 +28,16 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonSchedule = findViewById(R.id.schedulebutton);
+        buttonSchedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: start");
+                Intent intent = new Intent(getApplicationContext(), SchedulerActivity.class);
+                Log.d(TAG, "onClick: before intent");
+                startActivity(intent);
+            }
+        });
     }
 }
