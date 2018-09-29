@@ -1,6 +1,7 @@
 package com.example.user.fyp.Math;
 
 import android.nfc.Tag;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +39,9 @@ public class CountingTopic extends AppCompatActivity {
         hiddenAnswer = findViewById(R.id.counting1_hiddenAnswer);
         edAnswer = findViewById(R.id.counting1_etAnswer);
         confirm = findViewById(R.id.counting1_bConfirm);
+    }
+
+    protected void resetCounterApple(){
         totalVisibleApple = 0;
     }
 
@@ -52,10 +56,33 @@ public class CountingTopic extends AppCompatActivity {
             a.setVisibility(View.VISIBLE);
             totalVisibleApple +=1;
         }
+        hiddenAnswer.setText(Integer.toString(totalVisibleApple));
     }
+
+    protected void doScramble(){
+        resetCounterApple();
+        for (int i = 0; i<10; i++){
+            setAppleVisible(appleslist[i]);
+            Log.d(TAG, "onCreate: setapple" + i);
+        }
+    }
+
 
     protected boolean checkAnswer(int a, int b){
         return a==b;
+    }
+
+    protected boolean checkBlankAnswer(String a){
+        return !a.equals("");
+    }
+
+    protected void clearAnswer(){
+        edAnswer.setText("");
+    }
+
+    protected void showSnackbar(View v, String text){
+        Snackbar bar = Snackbar.make(v, text, Snackbar.LENGTH_LONG);
+        bar.show();
     }
 
     @Override
@@ -64,34 +91,29 @@ public class CountingTopic extends AppCompatActivity {
         setContentView(R.layout.activity_counting_topic);
 
         establish();
-        for (int i = 0; i<10; i++){
-            setAppleVisible(appleslist[i]);
-            Log.d(TAG, "onCreate: setapple" + i);
-        }
-        hiddenAnswer.setText(totalVisibleApple);
+
+        doScramble();
 
 
         Log.d(TAG, "onCreate: visibleapple"+totalVisibleApple);
 
-//        confirm.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                if (checkBlankAnswer(c.getText().toString())){
-//                    if (checkAnswer(Integer.parseInt(c.getText().toString()),Integer.parseInt(answer_textView.getText().toString()))){
-//                        showSnackbar(v,"Correct");
-//                        correctAnswer();
-//                        randomise();
-//                        clearAnswer();
-//                    }
-//                    else {
-//                        showSnackbar(v, "False, The correct answer is " + answer_textView.getText().toString());
-//                        wrongAnswer();
-//                    }}
-//                else {
-//                    showSnackbar(v, "Blank Answer");
-//                }
-//            }
-//        });
+        confirm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkBlankAnswer(edAnswer.getText().toString())){
+                    if (checkAnswer(Integer.parseInt(edAnswer.getText().toString()),Integer.parseInt(hiddenAnswer.getText().toString()))){
+                        showSnackbar(v,"Correct");
+                        doScramble();
+                        clearAnswer();
+                    }
+                    else {
+                        showSnackbar(v, "False, The correct answer is " + hiddenAnswer.getText().toString());
+                    }}
+                else {
+                    showSnackbar(v, "Blank Answer");
+                }
+            }
+        });
 
     }
 }

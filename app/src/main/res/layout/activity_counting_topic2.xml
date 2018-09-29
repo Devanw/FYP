@@ -6,53 +6,202 @@
     android:layout_height="match_parent"
     tools:context=".Math.CountingTopic2">
 
+    <TextView
+        android:id="@+id/counting1_tvQuestion2"
+        android:layout_width="wrap_content"
+        android:layout_height="31dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/count_Question"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/counting2_guidelineHorisontal1"
+        app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft" />
+
     <android.support.constraint.Guideline
-        android:id="@+id/guideline8"
+        android:id="@+id/counting2_guidelineHorisontal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/counting2_guidelineHorisontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6086106" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/counting2_guidelineHorisontal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/counting2_guidelineHorisontal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/counting2_guidelineLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.1" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/guideline9"
+        android:id="@+id/counting2_guidelineRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_percent="0.9" />
 
+    <LinearLayout
+        android:id="@+id/counting2_llApple1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/counting2_llApple2"
+        app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft">
+
+        <ImageView
+            android:id="@+id/counting2_ivApple"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple4"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple5"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/counting2_llApple2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/counting2_guidelineHorisontal3">
+
+        <ImageView
+            android:id="@+id/counting2_ivApple10"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple9"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <ImageView
+            android:id="@+id/counting2_ivApple6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/applepic"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </LinearLayout>
+
+
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/counting2_bUp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
         android:text="Up"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintTop_toTopOf="@+id/guideline12" />
+        app:layout_constraintBottom_toTopOf="@+id/counting2_guidelineHorisontal4"
+        app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+        app:layout_constraintTop_toTopOf="@+id/counting2_guidelineHorisontal2" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/counting2_bDown"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="Down"
-        app:layout_constraintBottom_toTopOf="@+id/guideline11"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline12" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.85" />
+        app:layout_constraintBottom_toTopOf="@+id/counting2_guidelineHorisontal4"
+        app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/counting2_guidelineHorisontal2" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/counting2_tvAnswer"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginBottom="8dp"
@@ -60,27 +209,13 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="NUMBER"
-        app:layout_constraintBottom_toTopOf="@+id/guideline12"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline13" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6086106" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintBottom_toTopOf="@+id/counting2_guidelineHorisontal2"
+        app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/counting2_guidelineHorisontal1" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/counting2_bConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -89,21 +224,18 @@
         android:layout_marginTop="8dp"
         android:text="Confirm"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline11" />
+        app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/counting2_guidelineHorisontal4" />
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="290dp"
-        android:layout_height="240dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+    <TextView
+        android:id="@+id/counting2_hiddenAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline13"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
