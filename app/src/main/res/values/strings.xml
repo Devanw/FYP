@@ -22,4 +22,6 @@
     <string name="sett_reminder_desc">We will remind you of your studies</string>
     <string name="sett_reminder_time_label">Set Reminder Time</string>
     <string name="sett_reminder_time_content">8 : 00 PM</string>
+    <!--count-->
+    <string name="count_Question">How many Apples are there?</string>
 </resources>

@@ -27,5 +27,16 @@ public class MathTopicActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button buttonCounting = findViewById(R.id.buttonCoounting);
+        buttonCounting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: start");
+                Intent intent = new Intent(getApplicationContext(), CountingTopic.class);
+                Log.d(TAG, "onClick: before intent");
+                startActivity(intent);
+            }
+        });
     }
 }
