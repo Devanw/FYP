@@ -1,4 +1,4 @@
-package com.example.user.fyp.Math;
+package com.example.user.fyp.Activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.user.fyp.Math.CountingTopic;
+import com.example.user.fyp.Math.CountingTopic2;
+import com.example.user.fyp.Math.Subtraction1;
+import com.example.user.fyp.Math.Summation1;
 import com.example.user.fyp.R;
 
 public class MathTopicActivity extends AppCompatActivity {

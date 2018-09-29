@@ -23,7 +23,7 @@
         <activity android:name=".Math.CountingTopic" />
         <activity android:name=".Math.CountingTopic2" />
         <activity android:name=".Math.Summation1" />
-        <activity android:name=".Math.MathTopicActivity" />
+        <activity android:name=".Activities.MathTopicActivity" />
         <activity android:name=".Activities.TestOverActivity" />
         <activity android:name=".Activities.SchedulerActivity" />
 

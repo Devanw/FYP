@@ -7,7 +7,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.user.fyp.Math.MathTopicActivity;
 import com.example.user.fyp.R;
 
 public class HomeActivity extends AppCompatActivity {
