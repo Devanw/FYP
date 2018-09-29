@@ -7,20 +7,8 @@
     tools:context=".Math.MathTopicActivity">
 
     <Button
-        android:id="@+id/mathTopicActivity_summationTopic1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Summation"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/buttonCoounting"
-        android:layout_width="wrap_content"
+        android:id="@+id/mathTopicActivity_bCounting1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -28,5 +16,42 @@
         android:text="counting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_summationTopic1" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/mathTopicActivity_bCounting2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="counting2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bCounting1" />
+
+    <Button
+        android:id="@+id/mathTopicActivity_bSummation1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Summation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bCounting2" />
+
+    <Button
+        android:id="@+id/mathTopicActivity_bSubtraction1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Subtraction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bSummation1" />
 </android.support.constraint.ConstraintLayout>

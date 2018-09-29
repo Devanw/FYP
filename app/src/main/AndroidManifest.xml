@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.fyp">
 
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:allowBackup="true"
@@ -25,13 +25,18 @@
         <activity android:name=".Math.Summation1" />
         <activity android:name=".Math.MathTopicActivity" />
         <activity android:name=".Activities.TestOverActivity" />
-        <activity android:name=".Activities.SchedulerActivity"></activity>
-        <receiver android:name=".Schedule.AlarmReceiver"
+        <activity android:name=".Activities.SchedulerActivity" />
+
+        <receiver
+            android:name=".Schedule.AlarmReceiver"
             android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+
+        <activity android:name=".Math.Subtraction1" />
+        <activity android:name=".Math.Geometry1"></activity>
     </application>
 
 </manifest>

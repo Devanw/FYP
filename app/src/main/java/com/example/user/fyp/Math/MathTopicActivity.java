@@ -17,8 +17,8 @@ public class MathTopicActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_math_topic);
-        Button buttonSummation = findViewById(R.id.mathTopicActivity_summationTopic1);
-        buttonSummation.setOnClickListener(new View.OnClickListener() {
+        Button buttonSummation1 = findViewById(R.id.mathTopicActivity_bSummation1);
+        buttonSummation1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: start");
@@ -28,12 +28,34 @@ public class MathTopicActivity extends AppCompatActivity {
             }
         });
 
-        Button buttonCounting = findViewById(R.id.buttonCoounting);
+        Button buttonCounting = findViewById(R.id.mathTopicActivity_bCounting1);
         buttonCounting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: start");
                 Intent intent = new Intent(getApplicationContext(), CountingTopic.class);
+                Log.d(TAG, "onClick: before intent");
+                startActivity(intent);
+            }
+        });
+
+        Button buttonCounting2 = findViewById(R.id.mathTopicActivity_bCounting2);
+        buttonCounting2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: start");
+                Intent intent = new Intent(getApplicationContext(), CountingTopic2.class);
+                Log.d(TAG, "onClick: before intent");
+                startActivity(intent);
+            }
+        });
+
+        Button buttonSubtraction1 = findViewById(R.id.mathTopicActivity_bSubtraction1);
+        buttonSubtraction1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: start");
+                Intent intent = new Intent(getApplicationContext(), Subtraction1.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
             }
