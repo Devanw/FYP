@@ -24,4 +24,43 @@
     <string name="sett_reminder_time_content">8 : 00 PM</string>
     <!--count-->
     <string name="count_Question">How many Apples are there?</string>
+    <string-array name="countNumber">
+        <item>Zero</item>
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+        <item>Eleven</item>
+        <item>Twelve</item>
+        <item>Thirteen</item>
+        <item>Fourteen</item>
+        <item>Fifteen</item>
+        <item>Sixteen</item>
+        <item>Seventeen</item>
+        <item>Eighteen</item>
+        <item>Nineteen</item>
+        <item>Twenty</item>
+    </string-array>
+    <!--geometry-->
+    <string-array name="geometryName">
+        <item>Circle</item>
+        <item>Square</item>
+        <item>Triangle</item>
+    </string-array>
+    <integer-array name="geometryPic">
+    <item>@drawable/circle</item>
+    <item>@drawable/square</item>
+    <item>@drawable/triangle</item>
+    </integer-array>
+    <string-array name="geometryDefinition">
+        <item>This is a Circle/nIt has no pointy side</item>
+        <item>This is a Square/nIt has four pointy side</item>
+        <item>This is a Triangle/It has three pointy side</item>
+    </string-array>
 </resources>

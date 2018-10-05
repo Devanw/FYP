@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#017398</color>
     <color name="colorAccent">#FFF000</color>
 
+    <color name="whitee">#ffffff</color>
+
     <color name="textcolorHeader">#069ECF</color>
     <color name="textColorPrimary">#000000</color>
     <color name="textColorSecondary">#A5A5A5</color>
