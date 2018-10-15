@@ -54,13 +54,13 @@
         <item>Triangle</item>
     </string-array>
     <integer-array name="geometryPic">
-    <item>@drawable/circle</item>
-    <item>@drawable/square</item>
-    <item>@drawable/triangle</item>
+        <item>@drawable/circle</item>
+        <item>@drawable/square</item>
+        <item>@drawable/triangle</item>
     </integer-array>
     <string-array name="geometryDefinition">
-        <item>This is a Circle/nIt has no pointy side</item>
-        <item>This is a Square/nIt has four pointy side</item>
-        <item>This is a Triangle/It has three pointy side</item>
+        <item>This is a Circle\nIt has no pointy side</item>
+        <item>This is a Square\nIt has four pointy side</item>
+        <item>This is a Triangle\nIt has three pointy side</item>
     </string-array>
 </resources>

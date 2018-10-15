@@ -37,7 +37,8 @@
 
         <activity android:name=".Math.Subtraction1" />
         <activity android:name=".Math.Geometry1" />
-        <activity android:name=".Math.StudyCounting"></activity>
+        <activity android:name=".Math.StudyCounting" />
+        <activity android:name=".Math.StudyGeometry"></activity>
     </application>
 
 </manifest>
