@@ -36,7 +36,8 @@
         </receiver>
 
         <activity android:name=".Math.Subtraction1" />
-        <activity android:name=".Math.Geometry1"></activity>
+        <activity android:name=".Math.Geometry1" />
+        <activity android:name=".Math.StudyCounting"></activity>
     </application>
 
 </manifest>

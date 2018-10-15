@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.example.user.fyp.Math.CountingTopic;
 import com.example.user.fyp.Math.CountingTopic2;
 import com.example.user.fyp.Math.Geometry1;
+import com.example.user.fyp.Math.StudyCounting;
 import com.example.user.fyp.Math.Subtraction1;
 import com.example.user.fyp.Math.Summation1;
 import com.example.user.fyp.R;
@@ -72,6 +73,17 @@ public class MathTopicActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(TAG, "onClick: start");
                 Intent intent = new Intent(getApplicationContext(), Geometry1.class);
+                Log.d(TAG, "onClick: before intent");
+                startActivity(intent);
+            }
+        });
+
+        Button buttonSCounting = findViewById(R.id.mathTopicActivity_bSCounting);
+        buttonSCounting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: start");
+                Intent intent = new Intent(getApplicationContext(), StudyCounting.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
             }

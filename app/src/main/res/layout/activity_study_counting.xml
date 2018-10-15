@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Math.StudyCounting">
+
+    <LinearLayout
+        android:id="@+id/sCounting_llVertiical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/sCounting_guidelineHorisontal"
+        app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/sCounting_llApple4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/sCounting_llApple2"
+            app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft">
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple11"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple12"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple13"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple14"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple15"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sCounting_llApple3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/sCounting_llApple2"
+            app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft">
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple16"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple17"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple18"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple19"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple20"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sCounting_llApple1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/sCounting_llApple2"
+            app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft">
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sCounting_llApple2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft"
+            app:layout_constraintTop_toTopOf="@+id/sCounting_guidelineHorisontal">
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/sCounting_ivApple6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/sCounting_guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/sCounting_guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/sCounting_guidelineHorisontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="There are "
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft"
+        app:layout_constraintTop_toTopOf="@+id/sCounting_guidelineHorisontal" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Apples"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/sCounting_bBack"
+        app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft" />
+
+    <TextView
+        android:id="@+id/sCounting_tvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="X"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/sCounting_bNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight" />
+
+    <Button
+        android:id="@+id/sCounting_bBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft" />
+
+</android.support.constraint.ConstraintLayout>
