@@ -62,117 +62,131 @@
         app:layout_constraintGuide_percent="0.9" />
 
     <LinearLayout
-        android:id="@+id/counting2_llApple1"
+        android:id="@+id/counting2_llVertiical"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/counting2_llApple2"
-        app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
-        app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft">
-
-        <ImageView
-            android:id="@+id/counting2_ivApple"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <ImageView
-            android:id="@+id/counting2_ivApple2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <ImageView
-            android:id="@+id/counting2_ivApple3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <ImageView
-            android:id="@+id/counting2_ivApple4"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <ImageView
-            android:id="@+id/counting2_ivApple5"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/counting2_llApple2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:orientation="horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/counting1_tvQuestion2"
         app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft"
-        app:layout_constraintTop_toTopOf="@+id/counting2_guidelineHorisontal3">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/counting2_ivApple10"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
+        <LinearLayout
+            android:id="@+id/counting2_llApple1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/counting2_llApple2"
+            app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft">
 
-        <ImageView
-            android:id="@+id/counting2_ivApple9"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
+            <ImageView
+                android:id="@+id/counting2_ivApple"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-        <ImageView
-            android:id="@+id/counting2_ivApple8"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
+            <ImageView
+                android:id="@+id/counting2_ivApple2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-        <ImageView
-            android:id="@+id/counting2_ivApple7"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
+            <ImageView
+                android:id="@+id/counting2_ivApple3"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
 
-        <ImageView
-            android:id="@+id/counting2_ivApple6"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/applepic"
-            tools:layout_editor_absoluteX="98dp"
-            tools:layout_editor_absoluteY="16dp" />
+            <ImageView
+                android:id="@+id/counting2_ivApple4"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/counting2_ivApple5"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/counting2_llApple2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/counting2_guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/counting2_guidelineLeft"
+            app:layout_constraintTop_toTopOf="@+id/counting2_guidelineHorisontal3">
+
+            <ImageView
+                android:id="@+id/counting2_ivApple10"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/counting2_ivApple9"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/counting2_ivApple8"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/counting2_ivApple7"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <ImageView
+                android:id="@+id/counting2_ivApple6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/applepic"
+                tools:layout_editor_absoluteX="98dp"
+                tools:layout_editor_absoluteY="16dp" />
+        </LinearLayout>
+
     </LinearLayout>
 
 
