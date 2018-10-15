@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class StudyCounting extends AppCompatActivity {
 
-    private static final String TAG = "count1";
+    private static final String TAG = "sCount";
 
     protected Button next;
     protected Button back;
