@@ -12,10 +12,11 @@
         android:id="@+id/schedulerActivity_tvReminderHeader"
         style="@style/settings_header"
         android:layout_width="wrap_content"
-        android:layout_height="22dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/abel"
         android:text="@string/sett_reminder_header"
+        android:textSize="21sp"
         app:layout_constraintStart_toStartOf="@+id/schedulerActivity_glLeft"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,9 +56,11 @@
                 style="@style/settings_sub_header"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/abel"
                 android:text="@string/sett_reminder_label"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -85,9 +88,11 @@
             android:id="@+id/schedulerActivity_tvLabelText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/abel"
             android:text="@string/sett_reminder_desc"
+            android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/schedulerActivity_glRight"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/schedulerActivity_glLeft"
@@ -118,9 +123,11 @@
                 android:id="@+id/schedulerActivity_tvReminderTimeLabel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/abel"
                 android:text="@string/sett_reminder_time_label"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -142,7 +149,9 @@
             android:id="@+id/schedulerActivity_tvReminderTimeDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sett_reminder_time_content" />
+            android:fontFamily="@font/abel"
+            android:text="@string/sett_reminder_time_content"
+            android:textSize="16sp" />
     </LinearLayout>
 
     <android.support.constraint.Guideline

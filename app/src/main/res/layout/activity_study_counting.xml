@@ -282,8 +282,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/abel"
         android:text="There are "
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft"
         app:layout_constraintTop_toTopOf="@+id/sCounting_guidelineHorisontal" />
@@ -295,8 +296,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/abel"
         android:text="Apples"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/sCounting_bBack"
         app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft" />
@@ -309,8 +311,9 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/abel"
         android:text="X"
-        android:textSize="30sp"
+        android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight"
         app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft"
@@ -322,7 +325,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/abel"
         android:text="Next"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/sCounting_guidelineRight" />
 
@@ -332,7 +337,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="@font/abel"
         android:text="Back"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/sCounting_guidelineLeft" />
 
