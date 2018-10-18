@@ -19,7 +19,7 @@
     <!--spinner-->
     <string-array name="spinnerFill">
         <item>Study</item>
-        <item>Test</item>
+        <item>Challenge</item>
     </string-array>
     <!--scheduler-->
     <string name="sett_reminder_header">Set Reminder</string>

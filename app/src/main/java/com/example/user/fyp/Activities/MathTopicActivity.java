@@ -30,7 +30,7 @@ public class MathTopicActivity extends AppCompatActivity {
     Button buttonGeo;
     Button buttonSCounting;
     Button buttonSGeo;
-    Spinner spinnerStudyOrTest;
+    Spinner spinnerStudyOrChallenge;
     ArrayAdapter<CharSequence> adapter;
 
     protected void establish(){
@@ -41,13 +41,13 @@ public class MathTopicActivity extends AppCompatActivity {
         buttonGeo = findViewById(R.id.mathTopicActivity_bGeometry1);
         buttonSCounting = findViewById(R.id.mathTopicActivity_bSCounting);
         buttonSGeo = findViewById(R.id.mathTopicActivity_bSGeometry);
-        spinnerStudyOrTest =  findViewById(R.id.mathTopicActivity_spinner);
+        spinnerStudyOrChallenge =  findViewById(R.id.mathTopicActivity_spinner);
         adapter = ArrayAdapter.createFromResource(this, R.array.spinnerFill, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerStudyOrTest.setAdapter(adapter);
+        spinnerStudyOrChallenge.setAdapter(adapter);
     }
 
-    protected void setTest(){
+    protected void setChallenge(){
         buttonCounting.setVisibility(View.VISIBLE);
         buttonCounting.setClickable(true);
         buttonCounting2.setVisibility(View.VISIBLE);
@@ -159,14 +159,14 @@ public class MathTopicActivity extends AppCompatActivity {
             }
         });
 
-        spinnerStudyOrTest.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        spinnerStudyOrChallenge.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position == 0){
                     setStudy();
                 }
                 else if (position == 1){
-                    setTest();
+                    setChallenge();
                 }
             }
 
