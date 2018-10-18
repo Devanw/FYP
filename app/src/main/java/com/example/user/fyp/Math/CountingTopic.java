@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.fyp.Activities.HomeActivity;
+import com.example.user.fyp.Activities.MathTopicActivity;
 import com.example.user.fyp.Activities.TestOverActivity;
 import com.example.user.fyp.R;
 
@@ -117,6 +119,13 @@ public class CountingTopic extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         timerCOUNTING1.cancel();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
+        startActivity(intent);
     }
 
     @Override

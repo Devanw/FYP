@@ -14,6 +14,12 @@ public class StartActivity extends AppCompatActivity {
     private static final String TAG = "StartActivity";
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);

@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.user.fyp.Activities.MathTopicActivity;
 import com.example.user.fyp.Activities.TestOverActivity;
 import com.example.user.fyp.R;
 
@@ -85,6 +86,13 @@ public class Subtraction1 extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         timerSubtraction.cancel();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
+        startActivity(intent);
     }
 
     protected void correctAnswer() {

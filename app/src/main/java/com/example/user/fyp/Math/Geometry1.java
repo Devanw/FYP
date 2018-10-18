@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.fyp.Activities.MathTopicActivity;
 import com.example.user.fyp.Activities.TestOverActivity;
 import com.example.user.fyp.R;
 
@@ -88,6 +89,13 @@ public class Geometry1 extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         timerGEOMETRY.cancel();
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
+        startActivity(intent);
     }
 
     @Override

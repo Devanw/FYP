@@ -1,5 +1,6 @@
 package com.example.user.fyp.Math;
 
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.fyp.Activities.MathTopicActivity;
 import com.example.user.fyp.R;
 
 import org.w3c.dom.Text;
@@ -78,6 +80,13 @@ public class StudyGeometry extends AppCompatActivity {
     }
 
     @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_study_geometry);
@@ -100,8 +109,6 @@ public class StudyGeometry extends AppCompatActivity {
                 reduceShape();
             }
         });
-
-
 
     }
 }

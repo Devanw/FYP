@@ -1,5 +1,6 @@
 package com.example.user.fyp.Math;
 
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.fyp.Activities.MathTopicActivity;
 import com.example.user.fyp.R;
 
 import java.util.Random;
@@ -105,7 +107,12 @@ public class StudyCounting extends AppCompatActivity {
         x.setText(Integer.toString(totalNumber));
 
     }
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

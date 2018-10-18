@@ -3,6 +3,7 @@ package com.example.user.fyp.Activities;
 import android.annotation.TargetApi;
 import android.app.TimePickerDialog;
 import android.content.ClipboardManager;
+import android.content.Intent;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,16 +28,18 @@ import java.util.Locale;
 public class SchedulerActivity extends AppCompatActivity {
     String TAG = "RemindMe";
     LocalData localData;
-
     SwitchCompat reminderSwitch;
     TextView tvTime;
-
     LinearLayout ll_set_time;
-
     int hour, min;
-
     ClipboardManager myClipboard;
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +47,9 @@ public class SchedulerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scheduler);
 
         localData = new LocalData(getApplicationContext());
-
         myClipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
-
         ll_set_time = (LinearLayout) findViewById(R.id.schedulerActivity_llSetStime);
-
         tvTime = (TextView) findViewById(R.id.schedulerActivity_tvReminderTimeDesc);
-
         reminderSwitch = (SwitchCompat) findViewById(R.id.schedulerActivity_timerSwitch);
 
         hour = localData.get_hour();
@@ -78,7 +77,6 @@ public class SchedulerActivity extends AppCompatActivity {
 
             }
         });
-
         ll_set_time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,8 +84,6 @@ public class SchedulerActivity extends AppCompatActivity {
                     showTimePickerDialog(localData.get_hour(), localData.get_min());
             }
         });
-
-
     }
 
 
@@ -106,11 +102,8 @@ public class SchedulerActivity extends AppCompatActivity {
                         localData.set_min(min);
                         tvTime.setText(getFormatedTime(hour, min));
                         NotificationScheduler.setReminder(SchedulerActivity.this, AlarmReceiver.class, localData.get_hour(), localData.get_min());
-
-
                     }
                 }, h, m, false);
-
         builder.setCustomTitle(view);
         builder.show();
 
