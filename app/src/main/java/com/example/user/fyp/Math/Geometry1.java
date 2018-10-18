@@ -100,7 +100,7 @@ public class Geometry1 extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
         if (sharedPreferences.contains(GEOMETRY1_HIGHSCORE_KEY)){
-            highScore.setText(sharedPreferences.getString(GEOMETRY1_HIGHSCORE_KEY,""));
+            highScore.setText(Integer.toString(sharedPreferences.getInt(GEOMETRY1_HIGHSCORE_KEY,0)));
         }
 
         timerGEOMETRY = new CountDownTimer(30000, 1000) {
@@ -110,8 +110,16 @@ public class Geometry1 extends AppCompatActivity {
 
             public void onFinish() {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(GEOMETRY1_HIGHSCORE_KEY, Integer.toString(finalScore));
-                editor.commit();
+                try {
+                    if (sharedPreferences.getInt(GEOMETRY1_HIGHSCORE_KEY, 0) < finalScore) {
+                        editor.putInt(GEOMETRY1_HIGHSCORE_KEY, finalScore);
+                        editor.commit();
+                    }
+                }
+                catch (Exception e){
+                    editor.putInt(GEOMETRY1_HIGHSCORE_KEY, finalScore);
+                    editor.commit();
+                }
 
                 timeLeft_textView.setText("done!");
                 Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);

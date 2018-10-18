@@ -141,7 +141,7 @@ public class CountingTopic2 extends AppCompatActivity {
         doScramble();
         sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
         if (sharedPreferences.contains(COUNTING2_HIGHSCORE_KEY)){
-            highScore.setText(sharedPreferences.getString(COUNTING2_HIGHSCORE_KEY,""));
+            highScore.setText(Integer.toString(sharedPreferences.getInt(COUNTING2_HIGHSCORE_KEY,0)));
         }
 
         timerCounting2 = new CountDownTimer(30000, 1000) {
@@ -151,8 +151,16 @@ public class CountingTopic2 extends AppCompatActivity {
 
             public void onFinish() {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(COUNTING2_HIGHSCORE_KEY, Integer.toString(finalScore));
-                editor.commit();
+                try {
+                    if (sharedPreferences.getInt(COUNTING2_HIGHSCORE_KEY, 0) < finalScore) {
+                        editor.putInt(COUNTING2_HIGHSCORE_KEY, finalScore);
+                        editor.commit();
+                    }
+                }
+                catch (Exception e){
+                    editor.putInt(COUNTING2_HIGHSCORE_KEY, finalScore);
+                    editor.commit();
+                }
 
                 timeLeft_textView.setText("done!");
                 Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);

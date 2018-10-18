@@ -110,7 +110,7 @@ public class Summation1 extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
         if (sharedPreferences.contains(SUMMATION1_HIGHSCORE_KEY)){
-            highScore.setText(sharedPreferences.getString(SUMMATION1_HIGHSCORE_KEY,""));
+            highScore.setText(Integer.toString(sharedPreferences.getInt(SUMMATION1_HIGHSCORE_KEY,0)));
         }
 
         timerSummation = new CountDownTimer(30000,1000){
@@ -120,8 +120,16 @@ public class Summation1 extends AppCompatActivity {
 
             public void onFinish() {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(SUMMATION1_HIGHSCORE_KEY, Integer.toString(finalScore));
-                editor.commit();
+                try {
+                    if (sharedPreferences.getInt(SUMMATION1_HIGHSCORE_KEY, 0) < finalScore) {
+                        editor.putInt(SUMMATION1_HIGHSCORE_KEY, finalScore);
+                        editor.commit();
+                    }
+                }
+                catch (Exception e){
+                    editor.putInt(SUMMATION1_HIGHSCORE_KEY, finalScore);
+                    editor.commit();
+                }
 
                 timeLeft_textView.setText("done!");
                 Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
