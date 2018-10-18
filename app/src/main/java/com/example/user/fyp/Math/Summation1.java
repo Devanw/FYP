@@ -1,7 +1,9 @@
 package com.example.user.fyp.Math;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.Tag;
 import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
@@ -17,6 +19,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.fyp.Activities.TestOverActivity;
 import com.example.user.fyp.R;
 
 import org.w3c.dom.Text;
@@ -34,6 +37,11 @@ public class Summation1 extends AppCompatActivity {
     protected TextView score_textView;
     protected Button confirm;
     private int finalScore;
+    CountDownTimer timerSummation;
+
+    public static final String SUMMATION1_HIGHSCORE_KEY = "SUMMATION1_HIGHSCORE_KEY";
+    private SharedPreferences sharedPreferences;
+    protected TextView highScore;
 
     protected void establish (){
         x = findViewById(R.id.summation1_firstNumber);
@@ -45,6 +53,7 @@ public class Summation1 extends AppCompatActivity {
         score_textView = findViewById(R.id.summation1_score);
         score_textView.setText("Score: -");
         finalScore = 0;
+        highScore = findViewById(R.id.summation1_tvHighscore2);
     }
 
     protected void randomise(){
@@ -87,19 +96,36 @@ public class Summation1 extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        timerSummation.cancel();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summation1);
         establish();
         randomise();
 
-        new CountDownTimer(30000,1000){
+        sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
+        if (sharedPreferences.contains(SUMMATION1_HIGHSCORE_KEY)){
+            highScore.setText(sharedPreferences.getString(SUMMATION1_HIGHSCORE_KEY,""));
+        }
+
+        timerSummation = new CountDownTimer(30000,1000){
             public void onTick(long millisUntilFinished) {
                 timeLeft_textView.setText("seconds remaining: " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(SUMMATION1_HIGHSCORE_KEY, Integer.toString(finalScore));
+                editor.commit();
+
                 timeLeft_textView.setText("done!");
+                Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
+                startActivity(intent);
             }
         }.start();
 

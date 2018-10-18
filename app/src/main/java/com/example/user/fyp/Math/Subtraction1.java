@@ -1,5 +1,8 @@
 package com.example.user.fyp.Math;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.user.fyp.Activities.TestOverActivity;
 import com.example.user.fyp.R;
 
 import java.util.Random;
@@ -24,6 +28,11 @@ public class Subtraction1 extends AppCompatActivity {
     protected TextView score_textView;
     protected Button confirm;
     private int finalScore;
+    CountDownTimer timerSubtraction;
+
+    public static final String SUBTRACTION1_HIGHSCORE_KEY = "SUBTRACTION1_HIGHSCORE_KEY";
+    private SharedPreferences sharedPreferences;
+    protected TextView highScore;
 
     protected void establish() {
         x = findViewById(R.id.subtraction1_firstNumber);
@@ -35,6 +44,7 @@ public class Subtraction1 extends AppCompatActivity {
         score_textView = findViewById(R.id.subtraction1_score);
         score_textView.setText("Score: -");
         finalScore = 0;
+        highScore = findViewById(R.id.subtraction1_tvHighscore2);
     }
 
     protected void randomise() {
@@ -71,6 +81,12 @@ public class Subtraction1 extends AppCompatActivity {
         bar.show();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        timerSubtraction.cancel();
+    }
+
     protected void correctAnswer() {
         finalScore += 10;
         score_textView.setText("Score: " + finalScore);
@@ -81,6 +97,7 @@ public class Subtraction1 extends AppCompatActivity {
         score_textView.setText("Score: " + finalScore);
     }
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,15 +105,28 @@ public class Subtraction1 extends AppCompatActivity {
         establish();
         randomise();
 
-        new CountDownTimer(30000, 1000) {
+        sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
+        if (sharedPreferences.contains(SUBTRACTION1_HIGHSCORE_KEY)){
+            highScore.setText(sharedPreferences.getString(SUBTRACTION1_HIGHSCORE_KEY,""));
+        }
+
+         timerSubtraction = new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {
                 timeLeft_textView.setText("seconds remaining: " + millisUntilFinished / 1000);
             }
 
             public void onFinish() {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(SUBTRACTION1_HIGHSCORE_KEY, Integer.toString(finalScore));
+                editor.commit();
+
                 timeLeft_textView.setText("done!");
+                Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
+                startActivity(intent);
             }
-        }.start();
+        };
+
+        timerSubtraction.start();
 
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
