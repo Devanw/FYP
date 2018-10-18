@@ -22,7 +22,7 @@ public class StudyGeometry extends AppCompatActivity {
     protected Button back;
     protected TypedArray geoList;
     protected String[] geoName;
-    protected String[] geoDef;
+    protected CharSequence[] geoDef;
     protected ImageView geoImage;
     protected TextView sGeoDesc;
     protected TextView sGeoName;
@@ -31,7 +31,7 @@ public class StudyGeometry extends AppCompatActivity {
     protected void establish(){
         geoList = getResources().obtainTypedArray(R.array.geometryPic);
         geoName = getResources().getStringArray(R.array.geometryName);
-        geoDef = getResources().getStringArray(R.array.geometryDefinition);
+        geoDef = getResources().getTextArray(R.array.geometryDefinition);
         geoNum = 0;
 
         next = findViewById(R.id.sGeometry_bNext);
