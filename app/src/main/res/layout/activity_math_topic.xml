@@ -14,7 +14,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:dropDownWidth="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mathTopicActivity_guideLineRight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -25,9 +25,10 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Study Geometry"
         android:fontFamily="@font/abel"
+        android:text="Study Geometry"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -43,8 +44,7 @@
         android:fontFamily="@font/abel"
         android:text="counting"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/mathTopicActivity_guideLineRight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_spinner" />
 
@@ -52,14 +52,13 @@
         android:id="@+id/mathTopicActivity_bCounting2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="counting2"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/abel"
+        android:text="counting2"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintEnd_toStartOf="@+id/mathTopicActivity_guideLineRight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bCounting1" />
 
@@ -67,13 +66,13 @@
         android:id="@+id/mathTopicActivity_bSummation1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Summation"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/abel"
+        android:text="Summation"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mathTopicActivity_guideLineRight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bCounting2" />
 
@@ -81,13 +80,13 @@
         android:id="@+id/mathTopicActivity_bSubtraction1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Subtraction"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/abel"
+        android:text="Subtraction"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mathTopicActivity_guideLineRight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bSummation1" />
 
@@ -95,13 +94,13 @@
         android:id="@+id/mathTopicActivity_bGeometry1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Geometry"
+        android:layout_marginEnd="8dp"
         android:fontFamily="@font/abel"
+        android:text="Geometry"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/mathTopicActivity_guideLineRight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bSubtraction1" />
 
@@ -115,8 +114,87 @@
         android:fontFamily="@font/abel"
         android:text="Study Counting"
         android:textSize="18sp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_spinner" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/mathTopicActivity_guideLineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.80" />
+
+    <TextView
+        android:id="@+id/mathTopicActivity_tvHighScore1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="High Score"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mathTopicActivity_guideLineRight"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/mathTopicActivity_tvHighScore2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mathTopicActivity_guideLineRight"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_spinner" />
+
+    <TextView
+        android:id="@+id/mathTopicActivity_tvHighScore3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mathTopicActivity_guideLineRight"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bSCounting" />
+
+    <TextView
+        android:id="@+id/mathTopicActivity_tvHighScore4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mathTopicActivity_guideLineRight"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bCounting2" />
+
+    <TextView
+        android:id="@+id/mathTopicActivity_tvHighScore5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mathTopicActivity_guideLineRight"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bSummation1" />
+
+    <TextView
+        android:id="@+id/mathTopicActivity_tvHighScore6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/mathTopicActivity_guideLineRight"
+        app:layout_constraintTop_toBottomOf="@+id/mathTopicActivity_bSubtraction1" />
 </android.support.constraint.ConstraintLayout>
