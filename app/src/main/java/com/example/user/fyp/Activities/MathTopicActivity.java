@@ -3,26 +3,24 @@ package com.example.user.fyp.Activities;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.example.user.fyp.Math.CountingTopic;
-import com.example.user.fyp.Math.CountingTopic2;
-import com.example.user.fyp.Math.Geometry1;
-import com.example.user.fyp.Math.StudyCounting;
-import com.example.user.fyp.Math.StudyGeometry;
-import com.example.user.fyp.Math.Subtraction1;
-import com.example.user.fyp.Math.Summation1;
+import com.example.user.fyp.Math.Challenge.CountingTopic;
+import com.example.user.fyp.Math.Challenge.CountingTopic2;
+import com.example.user.fyp.Math.Challenge.Geometry1;
+import com.example.user.fyp.Math.Study.StudyCounting;
+import com.example.user.fyp.Math.Study.StudyGeometry;
+import com.example.user.fyp.Math.Challenge.Subtraction1;
+import com.example.user.fyp.Math.Challenge.Summation1;
 import com.example.user.fyp.R;
 
 public class MathTopicActivity extends AppCompatActivity {

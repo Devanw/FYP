@@ -5,7 +5,7 @@
     android:id="@+id/summation1_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Math.Summation1">
+    tools:context=".Math.Challenge.Summation1">
 
     <android.support.constraint.Guideline
         android:id="@+id/summation1_guideline"

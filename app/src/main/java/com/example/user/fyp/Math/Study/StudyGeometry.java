@@ -1,4 +1,4 @@
-package com.example.user.fyp.Math;
+package com.example.user.fyp.Math.Study;
 
 import android.content.Intent;
 import android.content.res.TypedArray;

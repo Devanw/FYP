@@ -20,9 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.HomeActivity" />
-        <activity android:name=".Math.CountingTopic" />
-        <activity android:name=".Math.CountingTopic2" />
-        <activity android:name=".Math.Summation1" />
+        <activity android:name=".Math.Challenge.CountingTopic" />
+        <activity android:name=".Math.Challenge.CountingTopic2" />
+        <activity android:name=".Math.Challenge.Summation1" />
         <activity android:name=".Activities.MathTopicActivity" />
         <activity android:name=".Activities.TestOverActivity" />
         <activity android:name=".Activities.SchedulerActivity" />
@@ -35,10 +35,12 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".Math.Subtraction1" />
-        <activity android:name=".Math.Geometry1" />
-        <activity android:name=".Math.StudyCounting" />
-        <activity android:name=".Math.StudyGeometry"></activity>
+        <activity android:name=".Math.Challenge.Subtraction1" />
+        <activity android:name=".Math.Challenge.Geometry1" />
+        <activity android:name=".Math.Study.StudyCounting" />
+        <activity android:name=".Math.Study.StudyGeometry" />
+        <activity android:name=".Math.Study.StudySummation" />
+        <activity android:name=".Math.Study.StudySubtraction"></activity>
     </application>
 
 </manifest>
