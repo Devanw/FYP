@@ -1,6 +1,10 @@
 package com.example.user.fyp.Math;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.TypedArray;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.user.fyp.Activities.TestOverActivity;
 import com.example.user.fyp.R;
 
 import java.util.Random;
@@ -24,6 +29,14 @@ public class Geometry1 extends AppCompatActivity {
     protected Button confirmAnswerGeo;
     protected TextView hiddenAns;
     protected TextView actualAns;
+    protected TextView timeLeft_textView;
+    protected TextView score_textView;
+    private int finalScore;
+    CountDownTimer timerGEOMETRY;
+
+    public static final String GEOMETRY1_HIGHSCORE_KEY = "GEOMETRY1_HIGHSCORE_KEY";
+    private SharedPreferences sharedPreferences;
+    protected TextView highScore;
 
 
     protected void establish(){
@@ -36,6 +49,11 @@ public class Geometry1 extends AppCompatActivity {
         actualAns = findViewById(R.id.geometry1_actualHiddenAns);
         geometryPic = getResources().obtainTypedArray(R.array.geometryPic);
         geometryNameArry = getResources().getStringArray(R.array.geometryName);
+        finalScore = 0;
+        score_textView = findViewById(R.id.geometry1_score);
+        score_textView.setText("Score: -");
+        timeLeft_textView = findViewById(R.id.geometry1_timeLeft);
+        highScore = findViewById(R.id.geometry1_tvHighscore2);
     }
 
     protected void randomize(){
@@ -52,6 +70,26 @@ public class Geometry1 extends AppCompatActivity {
         third.setBackgroundResource(R.color.whitee);
     }
 
+    protected boolean checkAnswer(String a, String b){
+        return (Integer.parseInt(a) == Integer.parseInt(b));
+    }
+
+    protected void correctAnswer() {
+        finalScore += 10;
+        score_textView.setText("Score: " + finalScore);
+    }
+
+    protected void wrongAnswer() {
+        finalScore -= 5;
+        score_textView.setText("Score: " + finalScore);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        timerGEOMETRY.cancel();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +97,28 @@ public class Geometry1 extends AppCompatActivity {
         establish();
         clearAns();
         randomize();
+
+        sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
+        if (sharedPreferences.contains(GEOMETRY1_HIGHSCORE_KEY)){
+            highScore.setText(sharedPreferences.getString(GEOMETRY1_HIGHSCORE_KEY,""));
+        }
+
+        timerGEOMETRY = new CountDownTimer(30000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                timeLeft_textView.setText("seconds remaining: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(GEOMETRY1_HIGHSCORE_KEY, Integer.toString(finalScore));
+                editor.commit();
+
+                timeLeft_textView.setText("done!");
+                Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
+                intent.putExtra("HighScore", Integer.toString(finalScore));
+                startActivity(intent);
+            }
+        }.start();
 
         first.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,12 +151,19 @@ public class Geometry1 extends AppCompatActivity {
         confirmAnswerGeo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Integer.parseInt(actualAns.getText().toString()) == Integer.parseInt(hiddenAns.getText().toString())){
-                    Toast.makeText(Geometry1.this, "CORRECT", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(Geometry1.this, "INCORRECT", Toast.LENGTH_SHORT).show();
+                try {
+                    if (checkAnswer(actualAns.getText().toString(), hiddenAns.getText().toString())) {
+                        Toast.makeText(Geometry1.this, "CORRECT", Toast.LENGTH_SHORT).show();
+                        correctAnswer();
+                        randomize();
+                    } else {
+                        wrongAnswer();
+                        Toast.makeText(Geometry1.this, "INCORRECT, TRY AGAIN\nYou Can!!!", Toast.LENGTH_SHORT).show();
+                    }
                 }
-                randomize();
+                catch (Exception e) {
+                    Toast.makeText(Geometry1.this, "Blank Answer", Toast.LENGTH_SHORT).show();
+                }
                 clearAns();
             }
         });

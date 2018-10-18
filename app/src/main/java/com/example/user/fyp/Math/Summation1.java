@@ -125,6 +125,7 @@ public class Summation1 extends AppCompatActivity {
 
                 timeLeft_textView.setText("done!");
                 Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
+                intent.putExtra("HighScore", Integer.toString(finalScore));
                 startActivity(intent);
             }
         }.start();

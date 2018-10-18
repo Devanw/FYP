@@ -1,5 +1,9 @@
 package com.example.user.fyp.Math;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.CountDownTimer;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.user.fyp.Activities.TestOverActivity;
 import com.example.user.fyp.R;
 
 import java.util.Random;
@@ -24,6 +29,14 @@ public class CountingTopic2 extends AppCompatActivity {
     protected Button downButton;
     protected ImageView[] appleslist = new ImageView[10];
     private int totalVisibleApple;
+    protected TextView timeLeft_textView;
+    protected TextView score_textView;
+    private int finalScore;
+    CountDownTimer timerCounting2;
+
+    public static final String COUNTING2_HIGHSCORE_KEY = "COUNTING2_HIGHSCORE_KEY";
+    private SharedPreferences sharedPreferences;
+    protected TextView highScore;
 
     protected void establish(){
         appleslist[0] = findViewById(R.id.counting2_ivApple);
@@ -42,6 +55,11 @@ public class CountingTopic2 extends AppCompatActivity {
         confirm = findViewById(R.id.counting2_bConfirm);
         upButton = findViewById(R.id.counting2_bUp);
         downButton = findViewById(R.id.counting2_bDown);
+        finalScore = 0;
+        score_textView = findViewById(R.id.counting2_score);
+        score_textView.setText("Score: -");
+        timeLeft_textView = findViewById(R.id.counting2_timeLeft);
+        highScore = findViewById(R.id.counting2_tvHighscore2);
     }
 
     protected void resetCounterApple(){
@@ -75,6 +93,16 @@ public class CountingTopic2 extends AppCompatActivity {
         return a==b;
     }
 
+    protected void correctAnswer() {
+        finalScore += 10;
+        score_textView.setText("Score: " + finalScore);
+    }
+
+    protected void wrongAnswer() {
+        finalScore -= 5;
+        score_textView.setText("Score: " + finalScore);
+    }
+
     protected boolean checkBlankAnswer(String a){
         return !a.equals("");
     }
@@ -99,13 +127,39 @@ public class CountingTopic2 extends AppCompatActivity {
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        timerCounting2.cancel();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counting_topic2);
 
         establish();
-
         doScramble();
+        sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
+        if (sharedPreferences.contains(COUNTING2_HIGHSCORE_KEY)){
+            highScore.setText(sharedPreferences.getString(COUNTING2_HIGHSCORE_KEY,""));
+        }
+
+        timerCounting2 = new CountDownTimer(30000, 1000) {
+            public void onTick(long millisUntilFinished) {
+                timeLeft_textView.setText("seconds remaining: " + millisUntilFinished / 1000);
+            }
+
+            public void onFinish() {
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString(COUNTING2_HIGHSCORE_KEY, Integer.toString(finalScore));
+                editor.commit();
+
+                timeLeft_textView.setText("done!");
+                Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
+                intent.putExtra("HighScore", Integer.toString(finalScore));
+                startActivity(intent);
+            }
+        }.start();
 
 
         Log.d(TAG, "onCreate: visibleapple"+totalVisibleApple);
@@ -130,10 +184,12 @@ public class CountingTopic2 extends AppCompatActivity {
                 if (checkBlankAnswer(edAnswer.getText().toString())){
                     if (checkAnswer(Integer.parseInt(edAnswer.getText().toString()),Integer.parseInt(hiddenAnswer.getText().toString()))){
                         showSnackbar(v,"Correct");
+                        correctAnswer();
                         doScramble();
                         clearAnswer();
                     }
                     else {
+                        wrongAnswer();
                         showSnackbar(v, "False, The correct answer is " + hiddenAnswer.getText().toString());
                     }}
                 else {
