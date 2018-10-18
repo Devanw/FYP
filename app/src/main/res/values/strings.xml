@@ -16,6 +16,11 @@
     <string name="startButton">Start</string>
     <string name="confirmButton">Confirm</string>
     <string name="nextButton">Next</string>
+    <!--spinner-->
+    <string-array name="spinnerFill">
+        <item>Study</item>
+        <item>Test</item>
+    </string-array>
     <!--scheduler-->
     <string name="sett_reminder_header">Set Reminder</string>
     <string name="sett_reminder_label">Remind Me</string>
@@ -59,8 +64,8 @@
         <item>@drawable/triangle</item>
     </integer-array>
     <string-array name="geometryDefinition">
-        <item>This is a Circle\nIt has no pointy side</item>
-        <item>This is a Square\nIt has four pointy side</item>
-        <item>This is a Triangle\nIt has three pointy side</item>
+        <item>This is a <b>Circle</b>\nIt has <b>Zero</b> pointy side</item>
+        <item>This is a <b>Square</b>\nIt has <b>Four</b> pointy side</item>
+        <item>This is a <b>Triangle</b>\nIt has <b>Three</b> pointy side</item>
     </string-array>
 </resources>
