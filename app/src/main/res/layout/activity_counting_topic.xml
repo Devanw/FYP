@@ -93,7 +93,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@+id/counting1_guidelineHorisontal2"
+            app:layout_constraintBottom_toTopOf="@+id/counting1_guidelineHorisontal"
             app:layout_constraintEnd_toStartOf="@+id/counting1_guidelineRight"
             app:layout_constraintStart_toStartOf="@+id/counting1_guidelineLeft">
 
@@ -153,7 +153,7 @@
             app:layout_constraintEnd_toStartOf="@+id/counting1_guidelineRight"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/counting1_guidelineLeft"
-            app:layout_constraintTop_toTopOf="@+id/counting1_guidelineHorisontal2">
+            app:layout_constraintTop_toTopOf="@+id/counting1_guidelineHorisontal">
 
             <ImageView
                 android:id="@+id/counting1_ivApple10"
