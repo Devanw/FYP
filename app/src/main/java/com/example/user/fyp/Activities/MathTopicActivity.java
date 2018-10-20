@@ -21,6 +21,7 @@ import com.example.user.fyp.Math.Study.StudyCounting;
 import com.example.user.fyp.Math.Study.StudyGeometry;
 import com.example.user.fyp.Math.Challenge.Subtraction1;
 import com.example.user.fyp.Math.Challenge.Summation1;
+import com.example.user.fyp.Math.Study.StudySummation;
 import com.example.user.fyp.R;
 
 public class MathTopicActivity extends AppCompatActivity {
@@ -41,6 +42,7 @@ public class MathTopicActivity extends AppCompatActivity {
     Button buttonGeo;
     Button buttonSCounting;
     Button buttonSGeo;
+    Button buttonSSumm;
     Spinner spinnerStudyOrChallenge;
     ArrayAdapter<CharSequence> adapter;
 
@@ -61,6 +63,7 @@ public class MathTopicActivity extends AppCompatActivity {
         buttonGeo = findViewById(R.id.mathTopicActivity_bGeometry1);
         buttonSCounting = findViewById(R.id.mathTopicActivity_bSCounting);
         buttonSGeo = findViewById(R.id.mathTopicActivity_bSGeometry);
+        buttonSSumm = findViewById(R.id.mathTopicActivity_bSSummation);
         spinnerStudyOrChallenge =  findViewById(R.id.mathTopicActivity_spinner);
         adapter = ArrayAdapter.createFromResource(this, R.array.spinnerFill, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -97,6 +100,8 @@ public class MathTopicActivity extends AppCompatActivity {
         buttonSCounting.setClickable(false);
         buttonSGeo.setVisibility(View.INVISIBLE);
         buttonSGeo.setClickable(false);
+        buttonSSumm.setVisibility(View.INVISIBLE);
+        buttonSSumm.setClickable(false);
 
         highScoreTag.setVisibility(View.VISIBLE);
         highScore1.setVisibility(View.VISIBLE);
@@ -121,6 +126,8 @@ public class MathTopicActivity extends AppCompatActivity {
         buttonSCounting.setClickable(true);
         buttonSGeo.setVisibility(View.VISIBLE);
         buttonSGeo.setClickable(true);
+        buttonSSumm.setVisibility(View.VISIBLE);
+        buttonSSumm.setClickable(true);
 
         highScoreTag.setVisibility(View.INVISIBLE);
         highScore1.setVisibility(View.INVISIBLE);
@@ -244,6 +251,16 @@ public class MathTopicActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Log.d(TAG, "onClick: start");
                 Intent intent = new Intent(getApplicationContext(), StudyGeometry.class);
+                Log.d(TAG, "onClick: before intent");
+                startActivity(intent);
+            }
+        });
+
+        buttonSSumm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG, "onClick: start");
+                Intent intent = new Intent(getApplicationContext(), StudySummation.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
             }

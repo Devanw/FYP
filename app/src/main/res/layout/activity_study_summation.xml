@@ -6,4 +6,442 @@
     android:layout_height="match_parent"
     tools:context=".Math.Study.StudySummation">
 
+    <Button
+        android:id="@+id/sSumm_bUp3"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/abel"
+        android:text="↑"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_tv3" />
+
+    <Button
+        android:id="@+id/sSumm_bDown4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:fontFamily="@font/abel"
+        android:text="↓"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_bUp3" />
+
+    <TextView
+        android:id="@+id/sSumm_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/abel"
+        android:text="A"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/sSumm_guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_llh2" />
+
+    <TextView
+        android:id="@+id/sSumm_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/abel"
+        android:text="+"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/sSumm_tv6"
+        app:layout_constraintHorizontal_bias="0.607"
+        app:layout_constraintStart_toEndOf="@+id/sSumm_tv3"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_llh2" />
+
+    <TextView
+        android:id="@+id/sSumm_tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="40dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/abel"
+        android:text="B"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/sSumm_guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_llh2" />
+
+    <TextView
+        android:id="@+id/sSumm_tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/abel"
+        android:text="="
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/sSumm_tvX"
+        app:layout_constraintHorizontal_bias="0.219"
+        app:layout_constraintStart_toEndOf="@+id/sSumm_tv6"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_llh2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/sSumm_guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/sSumm_guidelineRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8541667" />
+
+    <LinearLayout
+        android:id="@+id/sSumm_llh2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/sSumm_guidelineHorisontal"
+        app:layout_constraintEnd_toStartOf="@+id/sSumm_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/sSumm_guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39">
+
+        <LinearLayout
+            android:id="@+id/sSumm_llh3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toStartOf="@+id/sSumm_guidelineRight"
+            tools:layout_editor_absoluteY="8dp">
+
+            <LinearLayout
+                android:id="@+id/sSumm_llv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sSumm_iv1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+                <ImageView
+                    android:id="@+id/sSumm_iv2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sSumm_llv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sSumm_iv3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+                <ImageView
+                    android:id="@+id/sSumm_iv4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sSumm_llv3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sSumm_iv5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+                <ImageView
+                    android:id="@+id/sSumm_iv6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sSumm_tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/abel"
+            android:text="+"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            tools:layout_editor_absoluteX="173dp"
+            tools:layout_editor_absoluteY="275dp" />
+
+        <LinearLayout
+            android:id="@+id/sSumm_llh4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <LinearLayout
+                android:id="@+id/sSumm_llv4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sSumm_iv7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+                <ImageView
+                    android:id="@+id/sSumm_iv8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sSumm_llv5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/sSumm_iv9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+                <ImageView
+                    android:id="@+id/sSumm_iv10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/sSumm_tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/abel"
+            android:text="="
+            android:textSize="30sp" />
+
+        <LinearLayout
+            android:id="@+id/sSumm_llVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="66dp"
+            tools:layout_editor_absoluteY="244dp">
+
+            <LinearLayout
+                android:id="@+id/sSumm_llApple1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@+id/sSumm_guidelineHorisontal"
+                app:layout_constraintEnd_toStartOf="@+id/sSumm_guidelineRight"
+                app:layout_constraintStart_toStartOf="@+id/sSumm_guidelineLeft">
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple3"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple4"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sSumm_llApple2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toStartOf="@+id/sSumm_guidelineRight"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/sSumm_guidelineLeft"
+                app:layout_constraintTop_toTopOf="@+id/sSumm_guidelineHorisontal">
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple10"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple9"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple8"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple7"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+
+                <ImageView
+                    android:id="@+id/sSumm_ivApple6"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/applepic"
+                    tools:layout_editor_absoluteX="98dp"
+                    tools:layout_editor_absoluteY="16dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/sSumm_guidelineHorisontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:id="@+id/sSumm_tvX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/abel"
+        android:text="_"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/sSumm_guidelineRight"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_llh2" />
+
+    <Button
+        android:id="@+id/sSumm_bUp"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/abel"
+        android:text="↑"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_tv3" />
+
+    <Button
+        android:id="@+id/sSumm_bDown2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/abel"
+        android:text="↓"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sSumm_bUp" />
 </android.support.constraint.ConstraintLayout>
