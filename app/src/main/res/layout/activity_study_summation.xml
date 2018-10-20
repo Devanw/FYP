@@ -444,4 +444,18 @@
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sSumm_bUp" />
+
+    <TextView
+        android:id="@+id/sSumm_tvInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/abel"
+        android:text="Let's try Summation!!!"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/sSumm_guidelineRight"
+        app:layout_constraintStart_toStartOf="@+id/sSumm_guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
