@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#069ECF</color>
-    <color name="colorPrimaryDark">#017398</color>
-    <color name="colorAccent">#FFF000</color>
+    <color name="colorPrimary">#13722f</color>
+    <color name="colorPrimaryDark">#115926</color>
+    <color name="colorAccent">#000000</color>
     <color name="greyBackground">#d3d3d3</color>
 
 
-    <color name="whitee">#ffffff</color>
+    <color name="whitee">#ff7f27</color>
 
-    <color name="textcolorHeader">#069ECF</color>
+    <color name="textcolorHeader">#168e3a</color>
     <color name="textColorPrimary">#000000</color>
     <color name="textColorSecondary">#A5A5A5</color>
 
+    <color name="purple">#a349a4</color>
+
     <!--switch color-->
 
-    <color name="thumb_active">#069ECF</color>
-    <color name="track_active">#66069ECF</color>
+    <color name="thumb_active">#13722f</color>
+    <color name="track_active">#168e3a</color>
 
     <color name="thumb_inactive">#A5A5A5</color>
     <color name="track_inactive">#66A5A5A5</color>

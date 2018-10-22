@@ -69,6 +69,7 @@ public class Geometry1 extends AppCompatActivity {
         first.setBackgroundResource(R.color.whitee);
         second.setBackgroundResource(R.color.whitee);
         third.setBackgroundResource(R.color.whitee);
+        hiddenAns.setText("");
     }
 
     protected boolean checkAnswer(String a, String b){

@@ -5,33 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.StartActivity"
-    android:background="@color/greyBackground">
+    android:id="@+id/startActivity"
+    android:background="#1d9441">
 
-
-    <Button
-        android:id="@+id/startActivity_startButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/abel"
-        android:text="@string/startButton"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline_MainActivity_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.513"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView_MainActivity_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:layout_marginTop="8dp"
         android:contentDescription="logo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline_MainActivity_1"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        app:srcCompat="@drawable/logo2" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline_MainActivity_1"
@@ -46,5 +33,19 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/startActivity_tvDirection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/abel"
+        android:text="Click anywhere to start!"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline_MainActivity_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
