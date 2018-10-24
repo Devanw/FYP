@@ -199,14 +199,14 @@ public class CountingTopic2 extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkBlankAnswer(edAnswer.getText().toString())){
                     if (checkAnswer(Integer.parseInt(edAnswer.getText().toString()),Integer.parseInt(hiddenAnswer.getText().toString()))){
-                        showSnackbar(v,"Correct");
+                        showSnackbar(v,"Correct!!");
                         correctAnswer();
                         doScramble();
                         clearAnswer();
                     }
                     else {
                         wrongAnswer();
-                        showSnackbar(v, "False, The correct answer is " + hiddenAnswer.getText().toString());
+                        showSnackbar(v, "Incorrect, Try Again\nYou Can!!!");
                     }}
                 else {
                     showSnackbar(v, "Blank Answer");

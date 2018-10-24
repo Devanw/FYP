@@ -151,13 +151,13 @@ public class Summation1 extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkBlankAnswer(c.getText().toString())){
                     if (checkAnswer(Integer.parseInt(c.getText().toString()),Integer.parseInt(answer_textView.getText().toString()))){
-                    showSnackbar(v,"Correct");
+                    showSnackbar(v,"Correct!!");
                     correctAnswer();
                     randomise();
                     clearAnswer();
                 }
                 else {
-                    showSnackbar(v, "False, The correct answer is " + answer_textView.getText().toString());
+                    showSnackbar(v, "Incorrect, Try Again\nYou Can!!!");
                     wrongAnswer();
                 }}
                 else {

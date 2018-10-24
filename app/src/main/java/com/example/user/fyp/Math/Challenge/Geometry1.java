@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.TypedArray;
 import android.os.CountDownTimer;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -99,6 +100,11 @@ public class Geometry1 extends AppCompatActivity {
         startActivity(intent);
     }
 
+    protected void showSnackbar(View v, String text){
+        Snackbar bar = Snackbar.make(v, text, Snackbar.LENGTH_LONG);
+        bar.show();
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -170,16 +176,16 @@ public class Geometry1 extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     if (checkAnswer(actualAns.getText().toString(), hiddenAns.getText().toString())) {
-                        Toast.makeText(Geometry1.this, "CORRECT", Toast.LENGTH_SHORT).show();
+                        showSnackbar(v,"Correct!!");
                         correctAnswer();
                         randomize();
                     } else {
                         wrongAnswer();
-                        Toast.makeText(Geometry1.this, "INCORRECT, TRY AGAIN\nYou Can!!!", Toast.LENGTH_SHORT).show();
+                        showSnackbar(v, "Incorrect, Try Again\nYou Can!!!");
                     }
                 }
                 catch (Exception e) {
-                    Toast.makeText(Geometry1.this, "Blank Answer", Toast.LENGTH_SHORT).show();
+                    showSnackbar(v, "Blank Answer");
                 }
                 clearAns();
             }
