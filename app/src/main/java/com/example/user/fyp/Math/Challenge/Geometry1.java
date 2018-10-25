@@ -67,9 +67,9 @@ public class Geometry1 extends AppCompatActivity {
     }
 
     protected void clearAns(){
-        first.setBackgroundResource(R.color.whitee);
-        second.setBackgroundResource(R.color.whitee);
-        third.setBackgroundResource(R.color.whitee);
+        first.setBackgroundResource(R.color.whitecolor);
+        second.setBackgroundResource(R.color.whitecolor);
+        third.setBackgroundResource(R.color.whitecolor);
         hiddenAns.setText("");
     }
 
@@ -146,27 +146,27 @@ public class Geometry1 extends AppCompatActivity {
         first.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                first.setBackgroundResource(R.color.colorAccent);
-                second.setBackgroundResource(R.color.whitee);
-                third.setBackgroundResource(R.color.whitee);
+                first.setBackgroundResource(R.color.selectcolor);
+                second.setBackgroundResource(R.color.whitecolor);
+                third.setBackgroundResource(R.color.whitecolor);
                 hiddenAns.setText(Integer.toString(0));
             }
         });
         second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                first.setBackgroundResource(R.color.whitee);
-                second.setBackgroundResource(R.color.colorAccent);
-                third.setBackgroundResource(R.color.whitee);
+                first.setBackgroundResource(R.color.whitecolor);
+                second.setBackgroundResource(R.color.selectcolor);
+                third.setBackgroundResource(R.color.whitecolor);
                 hiddenAns.setText(Integer.toString(1));
             }
         });
         third.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                first.setBackgroundResource(R.color.whitee);
-                second.setBackgroundResource(R.color.whitee);
-                third.setBackgroundResource(R.color.colorAccent);
+                first.setBackgroundResource(R.color.whitecolor);
+                second.setBackgroundResource(R.color.whitecolor);
+                third.setBackgroundResource(R.color.selectcolor);
                 hiddenAns.setText(Integer.toString(2));
             }
         });

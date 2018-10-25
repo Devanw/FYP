@@ -7,7 +7,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
-        android:label=""
+        android:label="Say Learn"
         android:roundIcon="@drawable/logo2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
