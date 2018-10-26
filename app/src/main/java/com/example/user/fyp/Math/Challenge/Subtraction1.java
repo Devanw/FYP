@@ -93,6 +93,7 @@ public class Subtraction1 extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);// animation
     }
 
     protected void correctAnswer() {
@@ -115,7 +116,7 @@ public class Subtraction1 extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences("MySharedPreMain", Context.MODE_PRIVATE);
         if (sharedPreferences.contains(SUBTRACTION1_HIGHSCORE_KEY)){
-            highScore.setText(sharedPreferences.getString(SUBTRACTION1_HIGHSCORE_KEY,""));
+            highScore.setText(Integer.toString(sharedPreferences.getInt(SUBTRACTION1_HIGHSCORE_KEY,0)));
         }
 
          timerSubtraction = new CountDownTimer(30000, 1000) {
@@ -125,13 +126,21 @@ public class Subtraction1 extends AppCompatActivity {
 
             public void onFinish() {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
-                editor.putString(SUBTRACTION1_HIGHSCORE_KEY, Integer.toString(finalScore));
-                editor.commit();
-
+                try {
+                    if (sharedPreferences.getInt(SUBTRACTION1_HIGHSCORE_KEY,0)<finalScore) {
+                        editor.putInt(SUBTRACTION1_HIGHSCORE_KEY, finalScore);
+                        editor.commit();
+                    }
+                }
+                catch (Exception e){
+                    editor.putInt(SUBTRACTION1_HIGHSCORE_KEY, finalScore);
+                    editor.commit();
+                }
                 timeLeft_textView.setText("done!");
                 Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
                 intent.putExtra("HighScore", Integer.toString(finalScore));
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         }.start();
 

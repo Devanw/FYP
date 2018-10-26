@@ -84,6 +84,7 @@ public class StudyGeometry extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);// animation
     }
 
     @Override

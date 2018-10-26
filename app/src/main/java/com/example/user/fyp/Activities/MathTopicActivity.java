@@ -142,6 +142,7 @@ public class MathTopicActivity extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(),HomeActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);// animation
     }
 
     protected void setSpinner0(){
@@ -192,6 +193,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Summation1.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -202,6 +204,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), CountingTopic.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -213,6 +216,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), CountingTopic2.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -223,6 +227,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Subtraction1.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -233,6 +238,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Geometry1.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -243,6 +249,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), StudyCounting.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -253,6 +260,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), StudyGeometry.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -263,6 +271,7 @@ public class MathTopicActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), StudySummation.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 

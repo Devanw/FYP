@@ -36,6 +36,7 @@ public class StartActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
     }

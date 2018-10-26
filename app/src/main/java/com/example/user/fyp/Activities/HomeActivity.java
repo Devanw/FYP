@@ -18,6 +18,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(),StartActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);// animation
     }
 
     @Override
@@ -32,6 +33,7 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), MathTopicActivity.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
 
@@ -43,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), SchedulerActivity.class);
                 Log.d(TAG, "onClick: before intent");
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         });
     }

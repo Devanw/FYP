@@ -126,6 +126,7 @@ public class CountingTopic extends AppCompatActivity {
         super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(),MathTopicActivity.class);
         startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);// animation
     }
 
     @Override
@@ -163,6 +164,7 @@ public class CountingTopic extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), TestOverActivity.class);
                 intent.putExtra("HighScore", Integer.toString(finalScore));
                 startActivity(intent);
+                overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);// animation
             }
         }.start();
 
