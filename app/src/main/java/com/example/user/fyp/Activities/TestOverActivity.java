@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.user.fyp.R;
@@ -14,9 +15,11 @@ import org.w3c.dom.Text;
 public class TestOverActivity extends AppCompatActivity {
 
     TextView highScore;
+    Button finish;
 
     protected void establish(){
         highScore = findViewById(R.id.testOver_score);
+        finish = findViewById(R.id.testOver_continue);
     }
 
     @Override
@@ -27,6 +30,12 @@ public class TestOverActivity extends AppCompatActivity {
         String intentScore = getIntent().getExtras().getString("HighScore");
         highScore.setText(intentScore);
         blink();
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     @Override
